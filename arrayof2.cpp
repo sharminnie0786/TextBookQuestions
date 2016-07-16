@@ -23,11 +23,12 @@ int main() {
         y[i] = rand() % 100 + 1;
         sum2 += y[i];
         
-        if (sum1 > sum2) {
+    }
+    // These if conditions don't come inside the loop
+    if (sum1 > sum2) {
             cout << "X was bigger: " << x[i] << endl;
         } else if (sum2 > sum1) {
             cout << "Y was bigger: " << y[i] << endl;
         }
-    }
 
 }

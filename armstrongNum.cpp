@@ -7,6 +7,40 @@
 //  Logic Question 30.
 //  I don't understand how I should take an int vaue and break each integer into a seperate part
 
+#include <stdio.h>
+#include "iostream"
+#include "fstream"
+#include "string"
+#include "ctime"
+#include "limits"
+
+using namespace std;
+
+int main(){
+    srand(time(0));
+    int number=0,remainder,numToCheck,temp;
+    cout << "Please enter a number you want to check : " << endl;
+    cin >> numToCheck;
+    remainder = numToCheck;
+    while (remainder > 0) {
+        temp = remainder % 10;
+        number += temp * temp * temp;
+        remainder = remainder / 10;
+    }
+    if(number == numToCheck){
+        cout <<"This number is an Armstrong number" << endl;
+    }
+    else{
+        cout <<"This number is not an Armstrong number" << endl;
+    }
+    return 0;
+}
+
+
+
+
+
+
 #include <iostream>
 #include <math.h>
 using namespace std;
